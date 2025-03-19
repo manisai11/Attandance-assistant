@@ -3,9 +3,9 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from pymongo import MongoClient
 
 # MongoDB connection
-client = MongoClient('mongodb+srv://manisaikunta2211:gBHzTK1T0Mw1gvbE@cluster0.jqmkv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')  # Use your actual MongoDB connection string
-db = client['Attandance_user']  # Replace with the database name
-users_collection = db['att_user_data']  # Replace with your collection name
+client = MongoClient('REPLACE WITH YOUR MONGODB STRING HERE')  # Use your actual MongoDB connection string
+db = client['REPLACE WITH YOUR DATABASE HERE']  # Replace with the database name
+users_collection = db['REPLACE WITH YOUR COLLECTION NAME HERE']  # Replace with your collection name
 
 # Create a Blueprint for authentication routes
 auth = Blueprint('auth', __name__)
