@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Attendance Monitoring System</h1>
+    </header>
+    <main class="container">
+        <label for="curr_pres">Current Present Days:</label>
+        <input type="number" id="curr_pres" placeholder="Enter current number of classes you were present"><br><br>
+
+        <label for="curr_total">Total Classes:</label>
+        <input type="number" id="curr_total" placeholder="Enter total number of classes held"><br><br>
+
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" placeholder="Enter date you want to start from"><br><br>
+        <p>*Note Current Present and Total Classes should be until previous day for the date entered</p>
+        
+        <p id="res"></p>
+        <button id="button1" onclick="handlebut()">Click me to get Attendance</button>
+        <button id="button2" onclick="handlegraph()">Click me to get graph</button>
+    </main>
+    <footer>
+        <p>&copy; copyrights applied.</p>
+        <p>Made for students</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
